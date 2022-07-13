@@ -1,21 +1,8 @@
 # Route Planning Project
 
-This repo contains the starter code for the Route Planning project.
+This repo contains the complete code for the Route Planning project. It implements A* Algorithm and finds the path between starting positon and ending position entered by the user and shows the result using a map from the OSM database. 
 
-<img src="map.png" width="600" height="450" />
-
-## Cloning
-
-When cloning this project, be sure to use the `--recurse-submodules` flag. Using HTTPS:
-```
-git clone https://github.com/udacity/CppND-Route-Planning-Project.git --recurse-submodules
-```
-or with SSH:
-```
-git clone git@github.com:udacity/CppND-Route-Planning-Project.git --recurse-submodules
-```
-
-## Dependencies for Running Locally
+## Dependencies
 * cmake >= 3.11.3
   * All OSes: [click here for installation instructions](https://cmake.org/install/)
 * make >= 4.1 (Linux, Mac), 3.81 (Windows)
@@ -29,7 +16,7 @@ git clone git@github.com:udacity/CppND-Route-Planning-Project.git --recurse-subm
 * IO2D
   * Installation instructions for all operating systems can be found [here](https://github.com/cpp-io2d/P0267_RefImpl/blob/master/BUILDING.md)
   * This library must be built in a place where CMake `find_package` will be able to find it
- 
+  * If you get an error related to svgp or boost during building Io2d you need to [change SVGP](https://github.com/cpp-io2d/P0267_RefImpl/pull/144/commits/958206b53d2cde8dba14bdcfa46022510ff71ae3) at `P0267_RefImpl/Samples/svg/external/svgpp` by cloning it into the mentioned directory.
 
 ## Compiling and Running
 
@@ -59,6 +46,12 @@ The testing executable is also placed in the `build` directory. From within `bui
 ```
 ./test
 ```
+
+## Results
+
+![image](https://user-images.githubusercontent.com/97186785/178655632-eab51c93-2f5d-4953-b864-5352d431b938.png)
+![image](https://user-images.githubusercontent.com/97186785/178655938-aced49c2-2df4-40fb-8ca7-38c1e74dd8b4.png)
+
 
 ## Troubleshooting
 * Some students have reported issues in cmake to find io2d packages, make sure you have downloaded [this](https://github.com/cpp-io2d/P0267_RefImpl/blob/master/BUILDING.md#xcode-and-libc).
